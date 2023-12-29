@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME TO MY PAGE</title>
+    <link rel="stylesheet" href="static/style.css">
+    <style>
+        body {
+            background-color: #f8f8f8;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Set height to 100% of viewport height */
+        }
+
+        h1 {
+            color: #0066cc;
+        }
+
+        #person-info {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            max-width: 600px; /* Adjust based on your design */
+        }
+
+        #person-info img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        #person-info strong {
+            color: #ff6600;
+            font-weight: bold;
+        }
+
+        #person-info p {
+            max-width: 400px; /* Adjust based on your design */
+        }
+    </style>
+</head>
+<body>
+
+<h1>WELCOME TO MY PAGE</h1>
+
+<!-- Use JavaScript to display additional information -->
+<script>
+    // Function to display additional information
+    function displayAdditionalInfo() {
+        const container = document.body;
+
+        // Create elements for additional information
+        const additionalInfo = document.createElement('div');
+        additionalInfo.id = 'person-info';
+        additionalInfo.innerHTML = `
+            <img src="static/person.jpg" alt="Person Image">
+            <div>
+                <h2><strong>NAME</strong>: Rajwardhan Yadav Patil</h2>
+                <p><strong>About Me:</strong><br> I am a Passionate Data Analyst working in a big MNC.<br>
+                I have done my engineering from Pune University.</p>
+                <p><strong>Contact:</strong> <br>Mobile - 8329444459<br>Email - rajwardhan@gmail.com<br>Address - Pune</p>
+            </div>
+        `;
+
+        // Append additional information to the container
+        container.appendChild(additionalInfo);
+    }
+
+    // Display additional information on page load
+    window.onload = displayAdditionalInfo;
+</script>
+
+</body>
+</html>
